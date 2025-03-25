@@ -1,0 +1,10 @@
+<div class="video-container">
+    <h3>Remote Video</h3>
+    <video #remoteVideo autoplay playsinline></video>
+    @if(showPlayButton){
+    <button (click)="onPlayButtonClick()" class="play-button">
+        Click to Play
+    </button>
+    }
+
+</div>
