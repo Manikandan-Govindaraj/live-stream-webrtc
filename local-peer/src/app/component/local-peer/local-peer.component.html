@@ -1,11 +1,9 @@
 <div class="video-container">
     <div>
-        <h3>Local Video</h3>
-        <video #localVideo autoplay playsinline></video>
-    </div>
-    <div>
-        <h3>Remote Video</h3>
-        <video #remoteVideo autoplay playsinline></video>
+        <div class="video-controls">
+            <h3>Local Video</h3>
+            <button (click)="startCall()">Start Call</button>
+          </div>
+        <video muted #localVideo [muted]="true" autoplay playsinline></video>
     </div>
 </div>
-<button (click)="startCall()">Start Call</button>

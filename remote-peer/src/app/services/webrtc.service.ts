@@ -16,9 +16,13 @@ export class WebrtcService {
     this.remoteStream = new MediaStream();
     this.peerConnection = new RTCPeerConnection({
       iceServers: [
-        { urls: 'stun:stun.l.google.com:19302' },
+        { urls: "turn:168.28.244.108:3478",
+          username: "manikandan323",
+          credential: "123423"
+         },
         // Add TURN servers here if needed for production
-      ]
+      ],
+      iceTransportPolicy: "all", // Try "relay" if only TURN should be used
     });
 
     this.setupConnectionListeners();

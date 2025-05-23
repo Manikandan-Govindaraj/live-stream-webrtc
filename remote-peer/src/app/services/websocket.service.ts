@@ -9,7 +9,10 @@ export class WebsocketService {
   private socket: Socket;
 
   constructor() {
-    this.socket = io('http://localhost:3000');
+    //this.socket = io('http://localhost:3000');
+    this.socket = io("https://rtcsocket.webpubsub.azure.com", {
+      path: "/clients/socketio/hubs/Hub",
+    });
   }
 
   sendMessage(event: string, data: any): void {
